@@ -1,0 +1,59 @@
+.toolbar {
+  height: $toolbar-height;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 4px 5px gray;
+  z-index: 100;
+
+  &__btn {
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+
+    &:last-child {
+      margin-right: 10px;
+    }
+
+    &.brush {
+      background: url("../../assets/images/brush.png") center / contain
+        no-repeat;
+    }
+
+    &.rect {
+      background: url("../../assets/images/rect.png") center / contain no-repeat;
+    }
+
+    &.circle {
+      background: url("../../assets/images/circle.png") center / contain
+        no-repeat;
+    }
+
+    &.eraser {
+      background: url("../../assets/images/eraser.png") center / contain
+        no-repeat;
+    }
+
+    &.line {
+      background: url("../../assets/images/line.png") center / contain no-repeat;
+    }
+
+    &.undo {
+      margin-left: auto;
+      background: url("../../assets/images/undo.png") center / contain no-repeat;
+    }
+
+    &.redo {
+      background: url("../../assets/images/redo.png") center / contain no-repeat;
+    }
+
+    &.save {
+      background: url("../../assets/images/save.png") center / contain no-repeat;
+    }
+  }
+}

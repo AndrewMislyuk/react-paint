@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  backend-app:
+    container_name: backend-app
+    build: ./server
+    restart: on-failure
+    tty: true
+    ports:
+      - "3001:3001"
+
+  frontend-app:
+    container_name: frontend-app
+    build: ./client
+    depends_on:
+      - backend-app
+    restart: on-failure
+    tty: true
+    ports:
+      - "3000:80"
